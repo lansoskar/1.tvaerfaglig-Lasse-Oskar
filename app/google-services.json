@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217210657182",
+    "project_id": "indkoebslisteapp",
+    "storage_bucket": "indkoebslisteapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217210657182:android:4ddbdd6bb63e3af0c29e8f",
+        "android_client_info": {
+          "package_name": "com.example.indkoebsliste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217210657182-ifvduodtssof3t1a6kbi8cin0lvnhdj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhjWai1bRkYNDIui5Vov0telt0-gzHNmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217210657182-ifvduodtssof3t1a6kbi8cin0lvnhdj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
