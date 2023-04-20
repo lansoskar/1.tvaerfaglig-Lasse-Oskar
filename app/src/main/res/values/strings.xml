@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Indkoebsliste</string>
+    <string name="hverdagslisten">Hverdagslisten</string>
+    <string name="gem_listen">Gem listen</string>
+    <string name="add">add</string>
+    <string name="tilf_j_varer">Tilføj varer:</string>
     <string name="log_in">Log in</string>
     <string name="inds_t_email">Indsæt Email</string>
     <string name="inds_t_password">Indsæt Password</string>
