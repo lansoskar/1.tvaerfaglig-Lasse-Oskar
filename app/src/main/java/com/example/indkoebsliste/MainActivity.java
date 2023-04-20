@@ -5,25 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import java.util.ArrayList;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import java.util.ArrayList;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
     private LinearLayout listlayout;
@@ -32,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hverdagslisten);
+        setContentView(R.layout.activity_main);
         Vare vare = new Vare("Mælk", false);
         Hverdagslisten hverdagslisten = new Hverdagslisten();
         hverdagslisten.addVare(vare);
