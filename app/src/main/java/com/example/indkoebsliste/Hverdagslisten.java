@@ -2,7 +2,7 @@ package com.example.indkoebsliste;
 
 import java.util.ArrayList;
 
-public class Hverdagslisten {
+public class Hverdagslisten  {
 
         private ArrayList<Vare> varer;
 

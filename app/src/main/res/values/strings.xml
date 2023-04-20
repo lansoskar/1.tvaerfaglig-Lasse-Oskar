@@ -2,4 +2,6 @@
     <string name="app_name">Indkoebsliste</string>
     <string name="hverdagslisten">Hverdagslisten</string>
     <string name="gem_listen">Gem listen</string>
+    <string name="add">add</string>
+    <string name="tilf_j_varer">Tilføj varer:</string>
 </resources>
