@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Indkoebsliste</string>
+    <string name="hverdagslisten">Hverdagslisten</string>
+    <string name="gem_listen">Gem listen</string>
 </resources>
