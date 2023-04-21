@@ -23,6 +23,7 @@
         <activity android:name=".CreateUserActivity"/>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".HomeActivity"/>
+        <activity android:name=".HverdagslistActivity"/>
     </application>
 
 </manifest>

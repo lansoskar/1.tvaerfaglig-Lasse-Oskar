@@ -2,13 +2,14 @@
     <string name="app_name">Indkoebsliste</string>
     <string name="hverdagslisten">Hverdagslisten</string>
     <string name="gem_listen">Gem listen</string>
-    <string name="add">add</string>
+    <string name="add">Tilføj</string>
     <string name="tilf_j_varer">Tilføj varer:</string>
     <string name="log_in">Log in</string>
     <string name="inds_t_email">Indsæt Email</string>
     <string name="inds_t_password">Indsæt Password</string>
     <string name="opret_bruger">Opret bruger</string>
     <string name="ikke_oprettet_bruger">Ikke oprettet bruger?</string>
+    <string name="skriv_vare_her">Skriv vare her</string>
     <color name="background">#D1FAD1</color>
     <color name="blue">#6D76E8</color>
 </resources>
