@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
                 test.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent goToUserCreation = new Intent(MainActivity.this, HverdagslistActivity.class);
-                        startActivity(goToUserCreation);
+                        Intent goToList = new Intent(MainActivity.this, HverdagslistActivity.class);
+                        startActivity(goToList);
                     }
                 });
 

@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Intent goToHome = new Intent(LoginActivity.this, HomeActivity.class);
+
                             startActivity(goToHome);
                         } else {
                             Toast.makeText(LoginActivity.this, "login failed", Toast.LENGTH_SHORT).show();
