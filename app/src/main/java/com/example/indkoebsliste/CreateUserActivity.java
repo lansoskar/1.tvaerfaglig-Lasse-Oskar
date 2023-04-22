@@ -14,8 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CreateUserActivity extends AppCompatActivity {
     @Override
@@ -23,7 +30,9 @@ public class CreateUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createuser);
 
+        FirebaseApp.initializeApp(this);
         FirebaseAuth auth = FirebaseAuth.getInstance();
+
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button createUserBtn = findViewById(R.id.createUserButton);
 
         createUserBtn.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +48,13 @@ public class CreateUserActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent goToHome = new Intent(CreateUserActivity.this, HomeActivity.class);
+                            FirebaseFirestore db = FirebaseFirestore.getInstance();
+                            CollectionReference usersRef = db.collection("Users");
+                            String userId = task.getResult().getUser().getUid();
+                            Map<String, Object> user = new HashMap<>();
+                            user.put("email", email);
+                            usersRef.document(email).set(user);
+                            Intent goToHome = new Intent(CreateUserActivity.this, MainActivity.class);
                             startActivity(goToHome);
                         } else {
                             Toast.makeText(CreateUserActivity.this, "Error", Toast.LENGTH_SHORT).show();

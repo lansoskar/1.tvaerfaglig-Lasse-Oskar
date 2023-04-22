@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent goToHome = new Intent(LoginActivity.this, HomeActivity.class);
+                            Intent goToHome = new Intent(LoginActivity.this, MainActivity.class);
 
                             startActivity(goToHome);
                         } else {

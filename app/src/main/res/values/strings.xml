@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Indkoebsliste</string>
-    <string name="hverdagslisten">Hverdagslisten</string>
-    <string name="gem_listen">Gem listen</string>
+    <string name="hverdagslisten">x liste</string>
+    <string name="gem_listen">Sync</string>
     <string name="add">Tilføj</string>
     <string name="tilf_j_varer">Tilføj varer:</string>
     <string name="log_in">Log in</string>
@@ -10,6 +10,7 @@
     <string name="opret_bruger">Opret bruger</string>
     <string name="ikke_oprettet_bruger">Ikke oprettet bruger?</string>
     <string name="skriv_vare_her">Skriv vare her</string>
+    <string name="se_liste">Se Liste</string>
     <color name="background">#D1FAD1</color>
     <color name="blue">#6D76E8</color>
 </resources>
