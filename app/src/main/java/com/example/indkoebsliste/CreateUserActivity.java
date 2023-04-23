@@ -43,7 +43,7 @@ public class CreateUserActivity extends AppCompatActivity {
 
                 String email = emailInput.getText().toString();
                 String password = passwordInput.getText().toString();
-
+                //Oskar
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -57,7 +57,7 @@ public class CreateUserActivity extends AppCompatActivity {
                             Intent goToHome = new Intent(CreateUserActivity.this, MainActivity.class);
                             startActivity(goToHome);
                         } else {
-                            Toast.makeText(CreateUserActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CreateUserActivity.this, "Invalid Email or Password", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

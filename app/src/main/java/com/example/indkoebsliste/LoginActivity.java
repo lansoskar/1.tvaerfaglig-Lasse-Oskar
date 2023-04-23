@@ -25,8 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         Button logInBtn = findViewById(R.id.button);
         Button createUserBtn = findViewById(R.id.button2);
-
-
+        //Oskar
         logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

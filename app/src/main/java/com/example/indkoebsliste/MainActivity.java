@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         DocumentReference userDocRef = db.collection("Users").document(userId);
 
         CollectionReference subCollectionRef = userDocRef.collection("List");
+        //Hvis brugeren ikke har en liste lav en under List i FireStore
         subCollectionRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -63,7 +64,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
-
-
-/* private FirebaseFirestore db = FirebaseFirestore.getInstance(); */

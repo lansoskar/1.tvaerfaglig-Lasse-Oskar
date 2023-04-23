@@ -36,11 +36,8 @@ import java.util.Map;
 public class HverdagslistActivity extends AppCompatActivity {
     private LinearLayout listlayout;
     private Button addVareBtn;
-    private Button saveListBtn;
+    private Button syncListBtn;
     private EditText userInput;
-
-    int DynamicTextViewId;
-    int DynamicCheckBoxId;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,19 +46,20 @@ public class HverdagslistActivity extends AppCompatActivity {
 
         listlayout = findViewById(R.id.LinearLayout1);
         addVareBtn = findViewById(R.id.button2);
-        saveListBtn = findViewById(R.id.saveList);
+        syncListBtn = findViewById(R.id.syncList);
         EditText userInput = findViewById(R.id.editTextAddVare);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseAuth auth = FirebaseAuth.getInstance();
-
+        //Oskar
         //specificer hvilken collection og subcollection vi skal hive fat i
         CollectionReference usersRef = db.collection("Users");
         String userId = auth.getCurrentUser().getEmail();
         DocumentReference userDocRef = usersRef.document(userId);
         CollectionReference subCollectionRef = userDocRef.collection("List");
-        //for hvert elemetn i collection lav textview og checkbox sammen i relativt layout og tilføj
+        //for hvert elemetn i collection lav textview og checkbox sammen i relativt layout og tilføj-
         //- til linear layout
+        //Oskar
         subCollectionRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -96,6 +94,7 @@ public class HverdagslistActivity extends AppCompatActivity {
                 }
             }
         });
+        //Oskar + Lasse
         addVareBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,10 +133,11 @@ public class HverdagslistActivity extends AppCompatActivity {
                 subCollectionRef.document(displayAddedVare.getId() + "").set(itemToFireStore);
             }
         });
-        saveListBtn.setOnClickListener(new View.OnClickListener() {
+        syncListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            // Gå igennem alle child elements af linear layout
+            //  opdater FireStore baseret på status af checkBox værdi
             }
         });
     }
